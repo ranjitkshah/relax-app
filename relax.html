@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Play sound</title>
+</head>
+
+
+<body>
+    <div class="app">
+
+        <div class="video-container">
+            <video loop src="./video/beach.mp4"></video>
+        </div>
+
+        <div class="time-select">
+
+
+            <button data-time="120" class="btn" data-hover="Lets Meditate!">
+                <div>02 minutes</div>
+            </button>
+            <button data-time="300" class="btn" data-hover="Lets Meditate!">
+                <div>05 minutes</div>
+            </button>
+            <button data-time="600" class="btn" data-hover="Lets Meditate!">
+                <div>10 minutes</div>
+            </button>
+        </div>
+        <div class="player-container">
+
+            <audio class="song" src="./sounds/beach.mp3"></audio>
+            <img src="./svg/play.svg" class="play" alt="play">
+             
+            <svg   width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                </svg>
+
+                <svg class="move" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+                    </svg>
+            <h3 class="time-display">0:00</h3>
+        </div>
+        <div class="sound-picker">
+
+
+            <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4">
+                <img src="./svg/beach.svg" alt="beach">
+            
+            </button>
+    
+            <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
+                <img src="./svg/rain.svg" alt="rain">
+            
+            </button>
+        </div>
+         
+        
+       
+
+    </div>
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

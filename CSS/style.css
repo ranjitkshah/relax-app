@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+ 
+ *{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+ }
+
+ .app{
+     height: 90vh;
+     justify-content: space-evenly;
+     display: flex;
+     align-items: center;
+ }
+
+ .time-select, 
+ .sound-picker,
+ .player-container{
+     height: 80%;
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+
+
+ }
+
+ .btn:hover{cursor: pointer}
+ .btn {
+   background: transparent; outline: none;
+   position: relative;
+   border: 2px solid #111;
+   padding: 15px 50px;
+   overflow: hidden;
+ }
+
+ /*button:before (attr data-hover)*/
+ .btn:hover:before{opacity: 1; transform: translate(0,0);}
+ .btn:before{
+   content: attr(data-hover);
+   position: absolute;
+   top: 1.1em; left: 0;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   font-weight: 800;
+   font-size: .8em;
+   opacity: 0;
+   transform: translate(-100%,0);
+   transition: all .3s ease-in-out;
+ }
+   /*button div (button text before hover)*/
+   .btn:hover div{opacity: 0; transform: translate(100%,0)}
+   .btn div{
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     font-weight: 800;
+     font-size: .8em;
+     transition: all .3s ease-in-out;
+   }
+
+ .player-container{
+   
+     position: relative;
+ }
+
+ .player-container svg{
+     position: absolute;
+     height: 50%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%) rotate(-90deg);
+     pointer-events: none;
+
+ }
+
+ .time-display{
+     position: absolute;
+     bottom: 10%;
+     color: white;
+    font-size: 60px;
+ }
+
+ .time-select{
+
+ 
+     flex-direction: column;
+    
+     
+ }
+
+ .btn{
+     margin: 10px;
+ }
+
+ .sound-picker{
+      
+     
+ }
+ .sound-picker button{
+     margin: 20px;
+     background: none;
+     padding: 30px;
+     cursor: pointer;
+     border-radius: 50%;
+     
+      
+
+ }
+
+ .sound-picker button:nth-child(1){
+     background: #4972a1;
+ }
+
+ .sound-picker button:nth-child(2){
+    background: #a14f49;
+}
+
+ video{
+
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width:100% ;
+    z-index: -10;
+ }
+  
