@@ -57,7 +57,7 @@ body {
   @media screen and (max-width: 480px){
       .container{
           position: relative;
-          top: 269px;
+          top: 245px;
       }
       .container img{
         position: relative;
