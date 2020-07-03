@@ -1,9 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
  
  *{
      margin: 0px;
      padding: 0px;
      box-sizing: border-box;
+ }
+
+ .title{
+     margin: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 30px;
+     background-color: #D63031;
+     color: white;
+     padding: 10px;
+     font-family: 'Teko', sans-serif;
+     border-radius: 0px 0px 15px 15px;
  }
 
  .app{
@@ -30,7 +44,7 @@
  .btn {
    background: transparent; outline: none;
    position: relative;
-   border: 2px solid #111;
+   border: 2px solid white;
    padding: 15px 50px;
    overflow: hidden;
  }
@@ -39,6 +53,7 @@
  .btn:hover:before{opacity: 1; transform: translate(0,0);}
  .btn:before{
    content: attr(data-hover);
+   color: white;
    position: absolute;
    top: 1.1em; left: 0;
    width: 100%;
@@ -54,6 +69,7 @@
    .btn:hover div{opacity: 0; transform: translate(100%,0)}
    .btn div{
      text-transform: uppercase;
+     color: white;
      letter-spacing: 3px;
      font-weight: 800;
      font-size: .8em;
@@ -94,10 +110,7 @@
      margin: 10px;
  }
 
- .sound-picker{
-      
-     
- }
+ 
  .sound-picker button{
      margin: 20px;
      background: none;
@@ -125,4 +138,59 @@
     width:100% ;
     z-index: -10;
  }
-  
+
+
+ @media screen and (max-width: 827px){
+
+.app{
+    display:flex;
+    flex-direction: column;
+}
+
+video{
+
+    object-fit: cover;
+    height: 100vh;
+    width: 100vh;
+
+}
+
+.time-select{
+    margin: 28px;
+    margin-top: 94px;
+}
+
+.player-container{
+   
+    margin: 23px;
+}
+
+.player-container img{
+    width: 71px;
+    position: relative;
+    left: 3px;
+
+}
+
+.player-container svg {
+    position: absolute;
+    height: 201%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+.time-display {
+    position: absolute;
+    bottom: -155%;
+    color: white;
+    font-size: 45px;
+}
+
+.sound-picker{
+    position: relative;
+    bottom: -89px;
+}
+
+ }
